@@ -1,4 +1,14 @@
-# elysia-mount
+# elysia-mount-req-method-bug
+
+This repository shows that Elysia's `mount` method can transform the incoming request method to `GET`.
+
+Please run the following to test:
+
+```bash
+curl 'http://localhost:3000/?test=1' \
+  -H 'Content-Type: application/json' \
+  --data-raw '{}'
+```
 
 To install dependencies:
 
@@ -9,7 +19,6 @@ bun install
 To run:
 
 ```bash
-bun run index.ts
+bun run dev
 ```
 
-This project was created using `bun init` in bun v1.2.2. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.

@@ -1,8 +1,9 @@
 import Elysia from 'elysia'
 
 const app = new Elysia()
-  .mount('/', (response) => {
-    return new Response(`I was a ${response.method} request`)
+  .mount('/*', (request) => {
+    console.log(request.method)
+    return new Response(`I was a ${request.method} request`)
   })
 
 app.listen(3000)
