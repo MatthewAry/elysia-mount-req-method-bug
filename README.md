@@ -5,7 +5,7 @@ This repository shows that Elysia's `mount` method can transform the incoming re
 Please run the following to test:
 
 ```bash
-curl 'http://localhost:3000/?test=1' \
+curl -X POST 'http://localhost:3000/?test=1' \
   -H 'Content-Type: application/json' \
   --data-raw '{}'
 ```
